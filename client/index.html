@@ -16,9 +16,9 @@
 <header class="header">
 	<!-- 使用 router-link 组件来导航. -->
 	<!-- 通过传入 `to` 属性指定链接. -->
-	<router-link to="{name:home}"><i class="fa fa-expand"></i></router-link>
+	<router-link to='/home'><i class="fa fa-expand"></i></router-link>
 	<h1><i class="fa fa-music"></i> Music Player</h1>
-	<router-link to="{name:list}"><i class="fa fa-list"></i></router-link>
+	<router-link :to="{name:'list'}"><i class="fa fa-list"></i></router-link>
 </header>
 <section class="main">
 	<!--路由出口-->
@@ -29,8 +29,8 @@
 <script id="list_tmpl" type="text/v-template">
 	<div class="list">
       <ol>
-        <li>
-          <router-link to='{name:item}', params: { id:1 }>
+        <li v-for="item in list">
+          <router-link :to='{name:item}', params: { id:1 }>
             <span class="num">001</span>
             <div class="info">
               <h3 class="title">一生中最爱</h3>
@@ -52,7 +52,7 @@
           </a>
         </li>
         <li>
-          <router-link to='{name:item}', params: { id:100 }>
+          <router-link :to='{name:item}', params: { id:100 }>
             <span class="num">003</span>
             <div class="info">
               <h3 class="title">送情郎(2010.12.11 德云二队张一元晚场)</h3>
@@ -63,7 +63,7 @@
           </a>
         </li>
         <li>
-          <router-link to='{name:item}', params: { id:100 }>
+          <router-link :to='{name:item}', params: { id:100 }>
             <span class="num">001</span>
             <div class="info">
               <h3 class="title">一生中最爱</h3>
@@ -74,7 +74,7 @@
           </a>
         </li>
         <li>
-          <router-link to='{name:item}', params: { id:100 }>
+          <router-link :to='{name:item}', params: { id:100 }>
             <span class="num">002</span>
             <div class="info">
               <h3 class="title">合久必婚</h3>
@@ -85,7 +85,7 @@
           </a>
         </li>
         <li>
-          <router-link to='{name:item}', params: { id:100 }>
+          <router-link :to='{name:item}', params: { id:100 }>
             <span class="num">003</span>
             <div class="info">
               <h3 class="title">送情郎(2010.12.11 德云二队张一元晚场)</h3>
@@ -96,7 +96,7 @@
           </a>
         </li>
         <li>
-          <router-link to='{name:item}', params: { id:100 }>
+          <router-link :to='{name:item}', params: { id:100 }>
             <span class="num">001</span>
             <div class="info">
               <h3 class="title">一生中最爱</h3>
@@ -107,7 +107,7 @@
           </a>
         </li>
         <li>
-          <router-link to='{name:item}', params: { id:100 }>
+          <router-link :to='{name:item}', params: { id:100 }>
             <span class="num">002</span>
             <div class="info">
               <h3 class="title">合久必婚</h3>
@@ -118,7 +118,7 @@
           </a>
         </li>
         <li>
-          <router-link to='{name:item}', params: { id:100 }>
+          <router-link :to='{name:item}', params: { id:100 }>
             <span class="num">003</span>
             <div class="info">
               <h3 class="title">送情郎(2010.12.11 德云二队张一元晚场)</h3>
@@ -129,7 +129,7 @@
           </a>
         </li>
         <li>
-          <router-link to='{name:item}', params: { id:100 }>
+          <router-link :to='{name:item}', params: { id:100 }>
             <span class="num">001</span>
             <div class="info">
               <h3 class="title">一生中最爱</h3>
@@ -140,7 +140,7 @@
           </a>
         </li>
         <li>
-          <router-link to='{name:item}', params: { id:100 }>
+          <router-link :to='{name:item}', params: { id:100 }>
             <span class="num">002</span>
             <div class="info">
               <h3 class="title">合久必婚</h3>
@@ -151,7 +151,7 @@
           </a>
         </li>
         <li>
-          <router-link to='{name:item}', params: { id:100 }>
+          <router-link :to='{name:item}', params: { id:100 }>
             <span class="num">003</span>
             <div class="info">
               <h3 class="title">送情郎(2010.12.11 德云二队张一元晚场)</h3>
@@ -162,7 +162,7 @@
           </a>
         </li>
         <li>
-          <router-link to='{name:item}', params: { id:100 }>
+          <router-link :to='{name:item}', params: { id:100 }>
             <span class="num">001</span>
             <div class="info">
               <h3 class="title">一生中最爱</h3>
@@ -173,7 +173,7 @@
           </a>
         </li>
         <li>
-          <router-link to='{name:item}', params: { id:100 }>
+          <router-link :to='{name:item}', params: { id:100 }>
             <span class="num">002</span>
             <div class="info">
               <h3 class="title">合久必婚</h3>
@@ -184,7 +184,7 @@
           </a>
         </li>
         <li>
-          <router-link to='{name:item}', params: { id:100 }>
+          <router-link :to='{name:item}', params: { id:100 }>
             <span class="num">003</span>
             <div class="info">
               <h3 class="title">送情郎(2010.12.11 德云二队张一元晚场)</h3>
@@ -222,11 +222,11 @@
 	</div>	
 </script>
 
-
 <script src="libs/vue/vue.js"></script>
 <script src="libs/vue-router/vue-router.js"></script>
-<script src="libs/vue-resourse/vue-resourse.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.3"></script>
 <script src="app.js"></script>
+
 
 
 </body>
